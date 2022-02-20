@@ -37,15 +37,6 @@
       ],
       "required": true
     },
-    "rounds": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "json",
-      "required": true
-    },
     "rate": {
       "pluginOptions": {
         "i18n": {
@@ -68,6 +59,24 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::app-user.app-user"
+    },
+    "depths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::number-tag.number-tag",
+      "mappedBy": "dive_log"
+    },
+    "minutes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::number-tag.number-tag",
+      "mappedBy": "diveLogMinutes"
+    },
+    "numberTags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::number-tag.number-tag",
+      "mappedBy": "diveLogDepth"
     }
   }
 }

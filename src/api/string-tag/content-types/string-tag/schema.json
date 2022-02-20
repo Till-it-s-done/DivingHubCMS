@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "app_users",
+  "collectionName": "string_tags",
   "info": {
-    "singularName": "app-user",
-    "pluralName": "app-users",
-    "displayName": "AppUser",
+    "singularName": "string-tag",
+    "pluralName": "string-tags",
+    "displayName": "StringTag",
     "description": ""
   },
   "options": {
@@ -12,14 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "displayName": {
+    "value": {
       "type": "string"
     },
-    "slug": {
-      "type": "uid",
-      "required": true
-    },
-    "asset": {
+    "icon": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::asset.asset"

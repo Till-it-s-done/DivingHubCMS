@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "number_tags",
+  "info": {
+    "singularName": "number-tag",
+    "pluralName": "number-tags",
+    "displayName": "NumberTag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "diveLogDepth": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dive-log.dive-log",
+      "inversedBy": "numberTags"
+    },
+    "diveLogMinutes": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dive-log.dive-log",
+      "inversedBy": "minutes"
+    }
+  }
+}
