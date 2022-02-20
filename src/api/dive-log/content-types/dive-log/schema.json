@@ -63,6 +63,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::asset.asset"
+    },
+    "appUser": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::app-user.app-user"
     }
   }
 }
