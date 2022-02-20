@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_ui_thumbnails",
+  "info": {
+    "displayName": "thumbnail",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "cover": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "carousels": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "backgroundHex": {
+      "type": "string"
+    }
+  }
+}

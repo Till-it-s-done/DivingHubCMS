@@ -29,16 +29,6 @@
       ],
       "required": true
     },
-    "depths": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::number-tag.number-tag"
-    },
-    "minutes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::number-tag.number-tag"
-    },
     "fishes": {
       "type": "relation",
       "relation": "oneToMany",
@@ -60,6 +50,36 @@
       "relation": "manyToOne",
       "target": "api::dive-spot.dive-spot",
       "inversedBy": "diveLogs"
+    },
+    "timeMins": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.tag"
+    },
+    "rounds": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.tag"
+    },
+    "depths": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.tag"
     }
   }
 }

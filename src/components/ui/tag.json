@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_ui_tags",
+  "info": {
+    "displayName": "tag",
+    "icon": "allergies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "stringValue": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "backgroundHex": {
+      "type": "string"
+    },
+    "numberValue": {
+      "type": "integer"
+    }
+  }
+}

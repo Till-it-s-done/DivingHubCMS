@@ -19,7 +19,7 @@
       "type": "uid",
       "required": true
     },
-    "asset": {
+    "avatar": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::asset.asset"

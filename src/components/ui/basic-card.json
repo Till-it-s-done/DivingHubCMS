@@ -10,28 +10,23 @@
     "title": {
       "type": "string"
     },
-    "carousels": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::asset.asset"
-    },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::string-tag.string-tag"
-    },
     "rating": {
       "type": "integer"
     },
-    "avatar": {
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::app-user.app-user"
     },
-    "thumbnail": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::asset.asset"
+    "cover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.thumbnail"
+    },
+    "tag": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.tag"
     }
   }
 }
