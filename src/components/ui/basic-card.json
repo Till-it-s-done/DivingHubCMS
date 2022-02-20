@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_ui_basic_cards",
+  "info": {
+    "displayName": "BasicCard",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "carousels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::asset.asset"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::string-tag.string-tag"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "avatar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::app-user.app-user"
+    },
+    "thumbnail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::asset.asset"
+    }
+  }
+}

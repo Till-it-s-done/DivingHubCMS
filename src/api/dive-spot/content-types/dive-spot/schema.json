@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dive_spots",
+  "info": {
+    "singularName": "dive-spot",
+    "pluralName": "dive-spots",
+    "displayName": "DiveSpot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "card": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.basic-card"
+    },
+    "diveLogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dive-log.dive-log",
+      "mappedBy": "diveSpot"
+    },
+    "instructors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::instructor.instructor",
+      "mappedBy": "supportDiveSpot"
+    },
+    "fishes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::string-tag.string-tag"
+    }
+  }
+}

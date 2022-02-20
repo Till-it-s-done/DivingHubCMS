@@ -16,14 +16,6 @@
     }
   },
   "attributes": {
-    "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "activity": {
       "pluginOptions": {
         "i18n": {
@@ -37,46 +29,37 @@
       ],
       "required": true
     },
-    "rate": {
+    "depths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::number-tag.number-tag"
+    },
+    "minutes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::number-tag.number-tag"
+    },
+    "fishes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::string-tag.string-tag",
+      "mappedBy": "diveLogFish"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "integer"
+      "component": "ui.basic-card"
     },
-    "cover": {
+    "diveSpot": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::asset.asset"
-    },
-    "thumbnail": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::asset.asset"
-    },
-    "appUser": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::app-user.app-user"
-    },
-    "depths": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::number-tag.number-tag",
-      "mappedBy": "dive_log"
-    },
-    "minutes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::number-tag.number-tag",
-      "mappedBy": "diveLogMinutes"
-    },
-    "numberTags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::number-tag.number-tag",
-      "mappedBy": "diveLogDepth"
+      "relation": "manyToOne",
+      "target": "api::dive-spot.dive-spot",
+      "inversedBy": "diveLogs"
     }
   }
 }

@@ -4,25 +4,33 @@
   "info": {
     "singularName": "asset",
     "pluralName": "assets",
-    "displayName": "asset"
+    "displayName": "asset",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "resource": {
+    "network": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "backgroundHex": {
       "type": "string"
+    },
+    "local": {
+      "type": "enumeration",
+      "enum": [
+        "default"
+      ]
     }
   }
 }

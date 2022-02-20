@@ -16,18 +16,6 @@
       "type": "integer",
       "default": 0,
       "required": true
-    },
-    "diveLogDepth": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::dive-log.dive-log",
-      "inversedBy": "numberTags"
-    },
-    "diveLogMinutes": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::dive-log.dive-log",
-      "inversedBy": "minutes"
     }
   }
 }

@@ -19,6 +19,27 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::asset.asset"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "categories"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Category",
+        "GeneralTag",
+        "Language",
+        "Fish"
+      ]
+    },
+    "diveLogFish": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dive-log.dive-log",
+      "inversedBy": "fishes"
     }
   }
 }

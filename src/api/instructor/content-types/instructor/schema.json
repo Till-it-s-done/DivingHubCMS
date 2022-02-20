@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "instructors",
+  "info": {
+    "singularName": "instructor",
+    "pluralName": "instructors",
+    "displayName": "Instructor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "card": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.basic-card"
+    },
+    "language": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::string-tag.string-tag"
+    },
+    "supportDiveSpot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dive-spot.dive-spot",
+      "inversedBy": "instructors"
+    }
+  }
+}
