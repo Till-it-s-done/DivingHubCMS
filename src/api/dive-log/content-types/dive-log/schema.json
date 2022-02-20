@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dive_logs",
+  "info": {
+    "singularName": "dive-log",
+    "pluralName": "dive-logs",
+    "displayName": "DiveLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "activity": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Scubar",
+        "FreeDiving"
+      ],
+      "required": true
+    },
+    "rounds": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json",
+      "required": true
+    },
+    "rate": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "cover": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::asset.asset"
+    },
+    "thumbnail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::asset.asset"
+    }
+  }
+}
